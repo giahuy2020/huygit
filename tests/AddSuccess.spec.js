@@ -109,21 +109,6 @@ test('view tip', async ({ page }) => {
     expect(popupVisible).toBe(false)
 });
 
-test('view tip 2', async ({ page }) => {
-    let popupVisible;
-    page.on('popup', () => {
-});
-    await page.goto('https://devdrbergstorage.z20.web.core.windows.net/add-client-success-story');
-   // Handle cookies
-    await page.click('button:has-text("Allow all cookies")');
-    await page.click('.prompts--message.select-none.svelte-nijzk8');
-    popupVisible = true;
-    expect(popupVisible).toBe(true); 
-    await page.click('.nav--esc.svelte-nijzk8');
-    popupVisible = false;
-    expect(popupVisible).toBe(false)
-});
-
 
 
 
